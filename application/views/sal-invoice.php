@@ -779,7 +779,7 @@ function generateETax(salesId, store_name, company_address, city_code, state_cod
             discount: parseFloat(item.discount_amt),
             vatRate: parseFloat(item.tax)
           }));
-
+          
             const body = {
                 content: htmlContent,
                 xml: {
@@ -796,7 +796,7 @@ function generateETax(salesId, store_name, company_address, city_code, state_cod
                             province: country_code,
                             postalCode: `<?php echo $company_postcode ?? ""; ?>`
                         },
-                        taxId: `<?php echo addslashes($company_gst_no) ?? ""; ?>`,
+                        taxId: `<?php echo addslashes(($company_gst_no ?? "") . ($company_pan_no ?? "")); ?>`,
                         branch: `<?php echo addslashes($company_pan_no) ?? ""; ?>`,
                         phone: `<?php echo $company_mobile ?? ""; ?>`,
                         mobile: `<?php echo $company_phone ?? ""; ?>`,
@@ -806,7 +806,7 @@ function generateETax(salesId, store_name, company_address, city_code, state_cod
                       name: `<?php echo addslashes($customer_name); ?>`,
                       address: `<?php echo addslashes($customer_address); ?>`,
                       postalCode: `<?php echo $customer_postcode ?? ""; ?>`,
-                      taxId: `<?php echo $customer_gst_no ?? ""; ?>`,
+                      taxId: `<?php echo addslashes(($customer_gst_no ?? "") . ($customer_tax_number ?? "")); ?>`,
                       mobile: `<?php echo $customer_mobile ?? ""; ?>`,
                       email: `<?php echo $customer_email ?? ""; ?>`
                     },

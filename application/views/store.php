@@ -116,7 +116,7 @@
                                              <div class="form-group">
                                                 <label for="gst_no" class="col-sm-4 control-label"><?= $this->lang->line('gst_number'); ?></label>
                                                 <div class="col-sm-8">
-                                                   <input type="text" class="form-control" id="gst_no" name="gst_no" placeholder="" value="<?php print $gst_no; ?>" onkeyup="shift_cursor(event,'vat_no')">
+                                                   <input type="text" class="form-control" id="gst_no" name="gst_no" placeholder="" maxlength="13" value="<?php print $gst_no; ?>" onkeyup="shift_cursor(event,'vat_no')">
                                                    <span id="gstin_msg" style="display:none" class="text-danger"></span>
                                                 </div>
                                              </div>
@@ -135,7 +135,7 @@
                                              <div class="form-group">
                                                 <label for="pan_no" class="col-sm-4 control-label"><?= $this->lang->line('branch'); ?></label>
                                                 <div class="col-sm-8">
-                                                   <input type="text" class="form-control" id="pan_no" name="pan_no" placeholder="รหัสสาขา 5 หลัก / 00000 คือสำนักงานใหญ่" value="<?php print $pan_no; ?>" onkeyup="shift_cursor(event,'store_website')">
+                                                   <input type="text" class="form-control" id="pan_no" name="pan_no" placeholder="รหัสสาขา 5 หลัก / 00000 คือสำนักงานใหญ่" maxlength="5" value="<?php print $pan_no; ?>" onkeyup="shift_cursor(event,'store_website')">
                                                    <span id="pan_msg" style="display:none" class="text-danger"></span>
                                                 </div>
                                              </div>

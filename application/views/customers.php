@@ -107,7 +107,7 @@
                                     <div class="form-group">
                                        <label for="gstin" class="col-sm-2 control-label"><?= $this->lang->line('gst_number'); ?></label>
                                        <div class="col-sm-4">
-                                          <input type="text" class="form-control" id="gstin" name="gstin" placeholder="" value="<?php print $gstin; ?>" >
+                                          <input type="text" class="form-control" id="gstin" name="gstin" placeholder="กรอกเลขประจำตัว 13 หลัก" maxlength="13" value="<?php print $gstin; ?>" >
                                          
                                           <span id="gstin_msg" style="display:none" class="text-danger"></span>
                                        </div>
@@ -116,7 +116,7 @@
                                     <div class="form-group"> -->
                                        <label for="tax_number" class="col-sm-2 control-label"><?= $this->lang->line('tax_number'); ?></label>
                                        <div class="col-sm-4">
-                                          <input type="text" class="form-control" id="tax_number" name="tax_number" placeholder="" value="<?php print $tax_number; ?>" >
+                                          <input type="text" class="form-control" id="tax_number" name="tax_number" placeholder="" maxlength="5" value="<?php print $tax_number; ?>" >
                                           <span id="tax_number_msg" style="display:none" class="text-danger"></span>
                                        </div>
                                     </div>
